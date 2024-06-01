@@ -1,0 +1,54 @@
+.mainbg {
+  height: 100%; /*Sets the scrollable area to 100% of the viewport*/
+  overflow: auto; 
+  overflow-x: hidden;
+  background-color: #4c4c67;
+  padding-top: 90px;
+
+
+}
+
+h1.myinfo {
+  color: #9d9999;
+  font-size: larger;
+  padding: 10px;
+  margin: 10px;
+}
+h1.headproject{
+  font-size: x-large;
+  justify-content: center;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.projectrow.row {
+  padding: 15px;
+}
+
+.mypitch {
+  padding: 30px;
+  margin: 20px;
+}
+
+/* Media query for screens smaller than 768px (standard tablets) */
+@media (max-width: 768px) {
+  .mainbg {
+    padding-top: 100px;
+    /* Add some padding for smaller screens */
+  }
+}
+
+
+img.img-nency {
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+}
