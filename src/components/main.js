@@ -10,6 +10,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import Nency from "../components/images/nency_image.jpg";
 import illustration from "../components/images/illustration.svg";
 import { Card } from "react-bootstrap";
+import { TypeAnimation } from "react-type-animation";
 
 export const Main = () => {
   return (
@@ -20,10 +21,26 @@ export const Main = () => {
             <Col>
               <div className="mypitch">
                 <h1 className="myinfo">
-                  Hello, I am Nency Patel. Full stacke devloper with experince
-                  in MERN stack technology. A web devloper with skills of
-                  ............
-                </h1>
+                  <TypeAnimation
+                    sequence={[
+                     
+                      "Hii ! I am Nency Patel", 
+                      2000, 
+                    
+                      () => {
+                        console.log("Sequence completed");
+                      },
+                    ]}
+                    wrapper="span"
+                    cursor={true}
+                    repeat={Infinity}
+                    style={{ fontSize: "2em", display: "inline-block" }}
+                  />
+               
+                 </h1>
+                 <h1 className="myinfo">
+                 A passionate and skilled full stack developer with extensive experience in React.js, Node.js, Express, and MongoDB. Proven track record in designing and implementing efficient, scalable web applications and collaborating with cross-functional teams to deliver high-quality projects.
+                 </h1>
               </div>
             </Col>
             <Col>
@@ -35,7 +52,7 @@ export const Main = () => {
         </div>
       </div>
       <div className="nameproject">
-        <Wave mask="url(#mask)" fill="#1277b0">
+        <Wave mask="url(#mask)" fill="#c7d6c4">
           <defs>
             <linearGradient id="gradient" gradientTransform="rotate(90)">
               <stop offset="0" stopColor="white" />
@@ -48,11 +65,9 @@ export const Main = () => {
                 width="2000"
                 height="200"
                 fill="url(#gradient)"
-              /> 
+              />
             </mask>
-           
           </defs>
-          
         </Wave>
         <h1 className="headproject">Projects</h1>
       </div>
@@ -61,7 +76,7 @@ export const Main = () => {
           <Row className="projectrow">
             <Card style={{ width: "18rem" }}>
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+                <Card.Title>Lost Persons Record</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
                   Card Subtitle
                 </Card.Subtitle>
@@ -148,16 +163,19 @@ export const Main = () => {
           </Row>
         </Container>
       </div>
-      {/* <Wave
-        fill="white"
-        style={{ display: "flex", color: "white" }}
-        options={{
-          height: 40,
-          amplitude: 20,
-          speed: 0.35,
-          points: 5,
-        }}
-      /> */}
+      <Wave mask="url(#mask)" fill="#c7d6c4">
+        <defs>
+          <linearGradient id="gradient" gradientTransform="rotate(90)">
+            <stop offset="0" stopColor="white" />
+            <stop offset="0.5" stopColor="black" />
+          </linearGradient>
+          <mask id="mask">
+            <rect x="0" y="0" width="2000" height="200" fill="url(#gradient)" />
+          </mask>
+        </defs>
+      </Wave>
+
+      <div className="skills"></div>
     </div>
   );
 };

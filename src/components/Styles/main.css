@@ -15,12 +15,23 @@ h1.myinfo {
   margin: 10px;
 }
 h1.headproject{
-  font-size: x-large;
+  font-size: 45px;
   justify-content: center;
   text-align: center;
-  color: whitesmoke;
+  color: #9d9999;
+}
+.hero{
+  height: 100vh;
 }
 
+.myimage{
+  display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-around;
+}
 .row {
   display: flex;
   flex-direction: row;
@@ -51,4 +62,11 @@ img.img-nency {
   width: 20em;
   height: 20em;
   border-radius: 50%;
+}
+
+.card {
+  background: thistle;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 13%;
 }

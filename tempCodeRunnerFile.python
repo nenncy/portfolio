@@ -1,0 +1,14 @@
+def plusOne(nums):
+    
+    s=[str(i) for i in nums]
+    number= int("".join(s))
+    newstr=(number + 1)
+    print(type(newstr))
+
+    newstring= [int(x) for x in str(newstr)]
+
+    return newstring
+
+if __name__ == "__main__":
+    result=plusOne([9])
+    print(result)
