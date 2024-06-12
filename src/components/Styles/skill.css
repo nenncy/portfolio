@@ -1,0 +1,8 @@
+.skillsbg{
+    height: 100%; /*Sets the scrollable area to 100% of the viewport*/
+    overflow: auto; 
+    overflow-x: hidden;
+    /* background-color: #4c4c67; */
+    background-color: #c7d6c4;;
+    padding-top: 90px;
+}
