@@ -1,0 +1,63 @@
+.projectbg {
+    height: 100%; /*Sets the scrollable area to 100% of the viewport*/
+    overflow: auto; 
+    overflow-x: hidden;
+    background-color: #4c4c67;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  
+  h2.projecthead {
+    color: #9d9999;
+    font-size: 32px;
+    text-align: center;
+    padding-top: 10px;
+    margin: 10px;
+  }
+  .project-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    width: 48%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    margin-top: 0;
+}
+
+.project-description {
+    color: #666;
+}
+
+.project-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-github {
+    background: #000;
+    color: #fff;
+}
+
+.btn-demo {
+    background: #28a745;
+    color: #fff;
+}

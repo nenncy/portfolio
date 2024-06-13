@@ -1,0 +1,56 @@
+.experiencebg{
+    height: 100%; /*Sets the scrollable area to 100% of the viewport*/
+    overflow: auto; 
+    overflow-x: hidden;
+    /* background-color: #4c4c67; */
+    background-color: #c7d6c4;;
+    padding-top: 40px; 
+}
+
+h2.exprproject {
+    text-align: center;
+    padding-bottom: 15px;
+}
+.experience-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fefefe;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.experience-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.experience-company {
+    margin: 0;
+}
+
+.experience-role {
+    margin: 0;
+    color: #666;
+}
+
+.experience-dates {
+    margin: 0;
+    color: #666;
+}
+
+.experience-description {
+    margin-top: 0;
+}
+.exprow.row {
+    padding: 20px;
+}

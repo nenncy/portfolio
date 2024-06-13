@@ -1,0 +1,47 @@
+.educationbg {
+    height: 100%; /*Sets the scrollable area to 100% of the viewport*/
+    overflow: auto; 
+    overflow-x: hidden;
+    background-color: #4c4c67;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  h2.educationname {
+    color: #9d9999;
+    font-size: 32px;
+    text-align: center;
+    padding-top: 10px;
+    margin: 10px;
+  }
+  .edudiv {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: center;
+}
+.educationcard.card {
+    color: var(--clr-neutral-100);
+    /* background-image: url(https://media.contentapi.ea.com/content/dam/eacom/images/2020/09/ea-featured-image-ea-desktop-beta.jpg.adapt.crop191x100.1200w.jpg); */
+    background-size: cover;
+    background: #fefefe;
+    padding: 1rem 0 0;
+    max-width: 70ch;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+  }
+  
+  button.statusbtn.btn.btn-primary {
+    color: white;
+    background: #28a745;
+    border: none;
+    margin-right: 20px;
+}
+button.gpabtn.btn.btn-primary {
+  color: white;
+  background:  #000;
+  border: none;
+  margin-right: 20px;
+}
