@@ -1,7 +1,7 @@
 {
   "name": "portfolioreact",
   "version": "0.1.0",
-  "homepage": "https://nenncy.github.io/react-gh-pages",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free-regular": "^5.0.13",
