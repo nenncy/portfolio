@@ -1,11 +1,13 @@
 import React from "react";
 import "../components/Styles/project.css";
 import { Row,Col } from "react-bootstrap";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export const Project = () => {
   return (
     <div className="projectbg">
       <h2 className="projecthead">PROJECT</h2>
+      <ScrollAnimation animateIn="bounceInRight">
       <Row>
         
         <div className="project-container">
@@ -32,6 +34,9 @@ export const Project = () => {
         
 
       </Row>
+      </ScrollAnimation>
+      <ScrollAnimation animateIn="bounceInRight">
+
       <Row>
         
         <div className="project-container">
@@ -58,6 +63,7 @@ export const Project = () => {
         
 
       </Row>
+      </ScrollAnimation>
     </div>
   );
 };

@@ -3,10 +3,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 40px;
-    background: linear-gradient(135deg, #d2e5d5, #87cefa);
+    background: linear-gradient(135deg, #c7d6c4, #4c4c67);
     color: #fff;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    /* border-top-left-radius: 50px; */
+    /* border-top-right-radius: 50px; */
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 

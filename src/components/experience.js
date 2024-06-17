@@ -1,11 +1,14 @@
 import React from "react";
 import { Col, Row, Card, Button } from "react-bootstrap";
 import "../components/Styles/experience.css";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export const Experience = () => {
   return (
     <div className="experiencebg">
       <h2 className="exprproject">EXPERIENCE</h2>
+      <ScrollAnimation animateIn="bounceInRight">
+
       <Row className="exprow">
         <Col>
           <div className="experience-container">
@@ -57,6 +60,9 @@ export const Experience = () => {
           </div>
         </Col>
       </Row>
+      </ScrollAnimation>
+      <ScrollAnimation animateIn="bounceInRight">
+
       <Row className="exprow">
         <Col>
           <div className="experience-container">
@@ -108,6 +114,7 @@ export const Experience = () => {
           </div>
         </Col>
       </Row>
+      </ScrollAnimation>
     </div>
   );
 };

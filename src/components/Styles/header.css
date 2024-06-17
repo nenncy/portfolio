@@ -7,6 +7,13 @@
 .navbarclass{
     background: #c7d6c4;
 }
+.navbar.colorChange{
+    background: linear-gradient(135deg, #c7d6c4, #4c4c67);
+    height: 10vh;  /* 100% of the viewport height */
+    width: 100vw; 
+    text-transform: uppercase;
+    font-size: 20px;
+}
 
 .navbarlink:hover {
     color: rgba(115, 214, 222, 0.8) !important; 

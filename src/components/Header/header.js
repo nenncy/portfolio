@@ -4,13 +4,28 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import '../Styles/header.css'
+import { useState } from 'react';
  
 
 export const Header = () => {
+    const [colorChange, setColorchange] = useState(false);
+    const changeNavbarColor = () => {
+        if (window.scrollY >= 80) {
+            setColorchange(true);
+        } else {
+            setColorchange(false);
+        }
+    };
+    window.addEventListener("scroll", changeNavbarColor);
+
   return (
    
     
-    <Navbar expand="lg"  className='navbarclass' fixed="top">
+    <Navbar expand="lg"  className={
+        colorChange
+            ? "navbar colorChange"
+            : "navbarclass"
+    } fixed="top">
         <Container >
             <Navbar.Brand href="#home">
             <span>{"<Nency "}</span>

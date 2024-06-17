@@ -40,6 +40,7 @@ export const Main = () => {
                     style={{ fontSize: "2em", display: "inline-block" }}
                   />
                 </h1>
+                <ScrollAnimation animateIn='fadeIn'>
                 <h1 className="myinfo">
                   A passionate and skilled full stack developer with extensive
                   experience in React.js, Node.js, Express, and MongoDB. Proven
@@ -47,6 +48,7 @@ export const Main = () => {
                   web applications and collaborating with cross-functional teams
                   to deliver high-quality projects.
                 </h1>
+               
                 <div className="social-media">
                   <a
                     href="https://www.linkedin.com/in/nency-patel-68aa751a0/"
@@ -69,10 +71,12 @@ export const Main = () => {
                     <img className="socialicon" src={githubIcon} alt="GitHub" />
                   </a>
                 </div>
+                </ScrollAnimation>
               </div>
+              
             </Col>
             <Col>
-
+                <ScrollAnimation animateIn='bounceInRight'>
               <div className="myimage">
               {/* <video loop muted autoPlay>
                     <source src={path} type="video/mp4"></source>
@@ -80,6 +84,7 @@ export const Main = () => {
                 </video> */}
                 <img className="img-nency" src={illustration}></img>
               </div>
+              </ScrollAnimation>
             </Col>
           </Row>
           {/* <Wave mask="url(#mask)" fill="#c7d6c4" >

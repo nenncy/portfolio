@@ -15,6 +15,7 @@ import {
 
 } from "@fortawesome/free-brands-svg-icons";
 import { SiPostgresql, SiMongodb, SiMysql, SiSqlite } from 'react-icons/si';
+import ScrollAnimation from "react-animate-on-scroll";
 
 export const Skill = () => {
   return (
@@ -22,6 +23,7 @@ export const Skill = () => {
       <div className="nameproject">
         {/* <h1 className="headskill">Skills</h1> */}
       </div>
+      <ScrollAnimation delay={900} animateIn='fadeIn'>
       <Row className="skillrow">
         <Col>
         <div className="skills-section">
@@ -74,6 +76,7 @@ export const Skill = () => {
       </div>
     </div>
         </Col>
+        
         <Col>
         <h2>What I do</h2>
         <p className="description">Passionate full stack developer with a focus on building scalable and efficient applications.</p>
@@ -95,6 +98,7 @@ export const Skill = () => {
 
         </Col>
       </Row>
+        </ScrollAnimation>
       
     </div>
   );
