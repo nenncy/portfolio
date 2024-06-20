@@ -45,3 +45,32 @@ button.gpabtn.btn.btn-primary {
   border: none;
   margin-right: 20px;
 }
+
+.edurow {
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .educationcard.card {
+    margin-bottom: 8px;
+
+  }
+  .edurow {
+    display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+  }
+
+  button.statusbtn.btn.btn-primary {
+    margin-bottom: 10px;
+  }
+}

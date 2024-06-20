@@ -1,29 +1,41 @@
 .projectbg {
-    height: 100%; /*Sets the scrollable area to 100% of the viewport*/
-    overflow: auto; 
+    height: 100%;
+    /*Sets the scrollable area to 100% of the viewport*/
+    overflow: auto;
     overflow-x: hidden;
     background-color: #4c4c67;
     padding-top: 20px;
     padding-bottom: 30px;
-  }
-  
-  h2.projecthead {
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 20px 0;
+}
+
+h2.projecthead {
     color: #9d9999;
     font-size: 32px;
     text-align: center;
     padding-top: 10px;
     margin: 10px;
-  }
-  .project-container {
+}
+
+.project-container {
     display: flex;
-    justify-content: space-between;
+    flex: 1 1 48%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    justify-content: center;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
 .project-card {
-    width: 48%;
+    width: 90%;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -60,4 +72,30 @@
 .btn-demo {
     background: #28a745;
     color: #fff;
+}
+.project-skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  .skill-icon {
+    padding: revert;
+    /* width: 24px; */
+    /* height: 24px; */
+    background: darkseagreen;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+    color: #f9f9f9;
+    font-size: 17px;
+    padding: 7px;
+    margin: 3px;
+  }
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .project-container {
+        flex: 1 1 100%;
+    }
 }

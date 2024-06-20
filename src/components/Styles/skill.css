@@ -4,7 +4,7 @@
     overflow-x: hidden;
     /* background-color: #4c4c67; */
     background-color: #c7d6c4;;
-    padding-top: 90px;
+    padding-top: 40px;
 }
 
 .icon-grid {
@@ -31,8 +31,8 @@
     color: #333;
   }
 
-  h1.headskill{
-    font-size: 45px;
+  h2.headskill{
+    font-size: 35px;
     justify-content: center;
     text-align: center;
     color: #222121;
@@ -108,7 +108,7 @@
     margin-top: 20px;
     /* text-align: left; */
     padding-left: 0;
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 20px;
 }
   

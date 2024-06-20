@@ -1,7 +1,7 @@
 import React from "react";
 import Wave from "react-wavify";
 import "./Styles/main.css";
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { BrowserRouter } from "react-router-dom";
@@ -14,11 +14,15 @@ import { TypeAnimation } from "react-type-animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import githubIcon from "../components/images/github.svg";
 import linkdinIcon from "../components/images/linkedin-in.svg";
+import ParticlesBg from 'particles-bg'
+
 
 
 export const Main = () => {
   return (
-    <div className="mainbg">
+    <div>
+       <div className="mainbg">
+    {/* <Container> */}
       <div id="home">
         <div className="hero">
           <Row>
@@ -70,6 +74,12 @@ export const Main = () => {
                   >
                     <img className="socialicon" src={githubIcon} alt="GitHub" />
                   </a>
+                </div>
+                <div className="resume">
+                  <Button className="resumebtn">
+                    RESUME
+                  </Button>
+
                 </div>
                 </ScrollAnimation>
               </div>
@@ -168,5 +178,9 @@ export const Main = () => {
       </Wave> */}
 
     </div>
+    
+
+    </div>
+   
   );
 };
