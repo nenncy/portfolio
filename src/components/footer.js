@@ -1,6 +1,6 @@
 import React from "react";
 import "../components/Styles/footer.css";
-import myimage from "../components/images/nency_image.jpg";
+import myimage from "../components/images/nency.png";
 import { Container } from "react-bootstrap";
 
 export const Footer = () => {

@@ -7,7 +7,7 @@ import { Col } from "react-bootstrap";
 import { BrowserRouter } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import ScrollAnimation from "react-animate-on-scroll";
-import Nency from "../components/images/nency_image.jpg";
+// import Nency from "../components/images/nency_image.jpg";
 import illustration from "../components/images/illustration.svg";
 import { Card } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
