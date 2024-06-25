@@ -78,7 +78,7 @@ button.gpabtn.btn.btn-primary:hover {
 
   .edurow {
       display: flex;
-      flex-direction: co;
+      flex-direction: column;
       flex-wrap: wrap;
       align-content: center;
       justify-content: space-between;
