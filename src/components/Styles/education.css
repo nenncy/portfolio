@@ -78,7 +78,7 @@ button.gpabtn.btn.btn-primary:hover {
 
   .edurow {
       display: flex;
-      flex-direction: column;
+      flex-direction: co;
       flex-wrap: wrap;
       align-content: center;
       justify-content: space-between;
@@ -94,7 +94,7 @@ button.gpabtn.btn.btn-primary:hover {
 /* Additional responsive design for very small screens */
 @media screen and (max-width: 480px) {
   .educationcard.card {
-      max-width: 90%;
+      max-width: 100%;
   }
 
   h2.educationname {
