@@ -10,12 +10,11 @@ export const Footer = () => {
         <div className="footer-container">
           <div className="footer-content">
             <h2>Reach Out to me!</h2>
-            <p>
-              DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR ALL
+            <p className="sayhello">
+            Got a project in mind or just want to say hello? My inbox is always open!
             </p>
             <p>
-              Full Stack Developer | Python | MERN | React.js - Crafting
-              Seamless Tech Solutions for Businesses
+            As a Software Developer with a passion for Python, MERN, and React.js, I specialize in crafting seamless tech solutions that drive business success. Let's turn your innovative ideas into reality!
             </p>
             <div className="footer-location">
               <span className="location-icon">📍</span>

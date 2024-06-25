@@ -78,7 +78,7 @@ button.gpabtn.btn.btn-primary:hover {
 
   .edurow {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: wrap;
       align-content: center;
       justify-content: space-between;
@@ -88,5 +88,22 @@ button.gpabtn.btn.btn-primary:hover {
 
   button.statusbtn.btn.btn-primary {
       margin-bottom: 10px;
+  }
+}
+
+/* Additional responsive design for very small screens */
+@media screen and (max-width: 480px) {
+  .educationcard.card {
+      max-width: 90%;
+  }
+
+  h2.educationname {
+      font-size: 24px;
+  }
+
+  button.statusbtn.btn.btn-primary,
+  button.gpabtn.btn.btn-primary {
+      margin-bottom: 10px;
+      width: 100%;
   }
 }

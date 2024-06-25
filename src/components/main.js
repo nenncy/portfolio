@@ -46,11 +46,7 @@ export const Main = () => {
                 </h1>
                 <ScrollAnimation animateIn='fadeIn'>
                 <h1 className="myinfo">
-                  A passionate and skilled full stack developer with extensive
-                  experience in React.js, Node.js, Express, and MongoDB. Proven
-                  track record in designing and implementing efficient, scalable
-                  web applications and collaborating with cross-functional teams
-                  to deliver high-quality projects.
+                A passionate and skilled software developer with extensive experience in Python, MERN stack, React.js, Node.js, Express, and MongoDB. Proven track record in designing and implementing efficient, scalable web applications and collaborating with cross-functional teams to deliver high-quality projects. Committed to leveraging cutting-edge technologies to solve complex problems and drive business success.
                 </h1>
                
                 <div className="social-media">
