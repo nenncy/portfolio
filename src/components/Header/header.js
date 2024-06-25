@@ -13,6 +13,7 @@ import mailIcon from "../images/envelope-solid.svg"
 import mailIcon1 from "../images/envelope-solid1.svg"
 
 export const Header = () => {
+  
   const [colorChange, setColorchange] = useState(false);
   const changeNavbarColor = () => {
     if (window.scrollY >= 80) {
@@ -67,7 +68,7 @@ export const Header = () => {
     
             <Nav.Link className="navbarlink" href="#resume">
             <a
-                href="https://github.com/nenncy/"
+                href="mailto:nencyvpatel3010@gmail.com"
                 target="_blank"
                 rel="noreferrer"
                 className="sociallink"

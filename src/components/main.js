@@ -76,9 +76,11 @@ export const Main = () => {
                   </a>
                 </div>
                 <div className="resume">
+                  <a href='/Resume_NencyPatel.pdf' download>
                   <Button className="resumebtn">
                     RESUME
                   </Button>
+                  </a>
 
                 </div>
                 </ScrollAnimation>

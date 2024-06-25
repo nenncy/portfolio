@@ -22,30 +22,25 @@ export const Project = () => {
       title: "Lost Persons Record",
       description:
         "Developed a website to help people reconnect with lost family members. The site features two panels, Admin and User. Admins can input accurate information and gather data from users about lost individuals. Authorized users can contact lost individuals and receive messages verifying their whereabouts.",
-      github: "https://github.com/your-repo/lost-persons-record",
+      github: "https://github.com/nenncy/lost-persons-record",
       demo: "DB",
       skills: ["HTML", "CSS", "JAVASCRIPT", "NODEJS", "MONGODB"],
     },
     {
       title: "Movie-Hub",
       description:
-        "Created a comprehensive movie database application where users can search for movies, view details, and read reviews. Implemented user authentication and a rating system to enhance user engagement and interaction.",
-      github: "https://github.com/your-repo/movie-hub",
-      demo: "React.js | Node.js | Express | MongoDB | TMDB API",
-      // skills: [
-      //   { name: "React.js", icon: "path/to/react-icon.png" },
-      //   { name: "Node.js", icon: "path/to/nodejs-icon.png" },
-      //   { name: "Express", icon: "path/to/express-icon.png" },
-      //   { name: "MongoDB", icon: "path/to/mongodb-icon.png" },
-      //   { name: "TMDB API", icon: "path/to/tmdb-icon.png" },
-      // ],
+        "I developed Movie Hub,a dynamic web application for exploring and discovering movies, using Node.js and React.js. This project involved creating a responsive user interface for browsing movie details, ratings, and reviews. I implemented a RESTful API to fetch movie data, ensuring efficient data handling and integration. Additionally, I utilized React.js to build a seamless and interactive user experience, while managing application state with Redux. This project significantly enhanced my skills in full-stack development and modern web technologies.",
+      github: "https://github.com/nenncy/movie-hub",
+      skills: ["React.js" ," Node.js" , "Express" , "MongoDB" ,"TMDB API"],
+     
     },
     {
       title: "Developer Portfolio",
       description:
-        "Software Developer Portfolio Template built with react.js and next.js bootstrap that helps you showcase your work and skills as a software developer.",
+        "I am building a personal portfolio website using ReactJS to showcase my projects, skills, and professional experience. This project involves creating a clean and responsive user interface to highlight my work effectively. I have implemented various sections including an about me page, a project gallery, a resume section, and a contact form. By leveraging ReactJS, I ensured a dynamic and interactive user experience. Additionally, I utilized modern web development practices and tools to enhance the performance and accessibility of the site. This project has helped me refine my front-end development skills and demonstrate my ability to create professional and engaging web applications.",
       github: "https://github.com/your-repo/developer-portfolio",
       demo: "https://demo-url.com/developer-portfolio",
+      skills:["ReactJS","Javascript","Bootsrap","HTML","CSS"]
       // skills: [
       //   { name: "React.js", icon: "path/to/react-icon.png" },
       //   { name: "Next.js", icon: "path/to/nextjs-icon.png" },
@@ -53,18 +48,32 @@ export const Project = () => {
       // ],
     },
     {
-      title: "FitLife",
+      title: "User Management Module",
       description:
-        "Built a mobile application to help users track their fitness activities, set goals, and monitor progress. The app includes features like workout logs, nutrition tracking, and social sharing to encourage a healthy lifestyle.",
+        "During my internship at Esmsys Pvt Ltd from January 2022 to March 2022, I developed a comprehensive User Management system using Node.js and React.js. This project provided a standardized solution for managing user information, modules, and access rights, featuring role-based access control for secure and efficient user management. I integrated a robust SQL database for reliable data storage and created an intuitive interface with React.js. This experience significantly enhanced my full-stack development skills and knowledge in implementing secure, scalable user management solutions.",
       github: "https://github.com/your-repo/fitlife",
       demo: "https://demo-url.com/fitlife",
-      // skills: [
-      //   { name: "React Native", icon: "path/to/react-native-icon.png" },
-      //   { name: "Firebase", icon: "path/to/firebase-icon.png" },
-      //   { name: "Node.js", icon: "path/to/nodejs-icon.png" },
-      // ],
+      skills:["Javascript","NodeJs","reactjs","sql","express"]
+  
     },
-    // Add more project objects here...
+    {
+      title: "WebAPI Bot",
+      description:
+        "I developed WebApi-Bot,a sophisticated bot designed to interact with the Gemini API, automating cryptocurrency data retrieval and processing tasks. This project involved creating a flexible and scalable bot framework using Node.js, capable of handling multiple API requests and responses efficiently. The bot was designed to fetch real-time cryptocurrency data, process it, and deliver the information in a structured format. By implementing robust error handling and logging mechanisms, I ensured the bot's reliability and maintainability. This project enhanced my skills in back-end development and API integration, showcasing my ability to build complex, automated solutions.",
+      github: "https://github.com/nenncy/WebApi-Bot",
+      demo: "https://demo-url.com/fitlife",
+      skills:["Javascript","NodeJs","reactjs","sql","express", "Gemini","html","css"]
+  
+    },
+    {
+      title: "Scratch and Win",
+      description:
+        "I developed Scratch and Win,a simple and engaging mobile application using Flutter. This app allows users to scratch a card on their screen to reveal a hidden prize. The project involved creating an interactive and responsive user interface that mimics the physical action of scratching a card. Using Flutter's rich set of widgets, I implemented smooth animations and touch interactions to enhance the user experience. The application also features basic game logic to determine and display random prizes. This project significantly improved my skills in mobile app development and provided hands-on experience with Flutter and Dart.",
+      github: "https://github.com/nenncy/WebApi-Bot",
+      demo: "https://demo-url.com/fitlife",
+      skills:["Dart","Flutter","HTML"]
+  
+    },
   ];
 
   return (

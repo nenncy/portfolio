@@ -23,19 +23,19 @@ export const Footer = () => {
             </div>
             <div className="footer-social-icons">
               <a
-                href="mailto:someone@example.com"
+                href="mailto:nencyvpatel3010@gmail.com"
                 className="social-icon email"
               >
                 ✉️
               </a>
               <a
-                href="https://www.linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/nency-patel-68aa751a0/"
                 className="social-icon linkedin"
               >
                 🔗
               </a>
               <a
-                href="https://github.com/yourprofile"
+                href="https://github.com/nenncy/"
                 className="social-icon github"
               >
                 🐙

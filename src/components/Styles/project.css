@@ -1,6 +1,5 @@
 .projectbg {
     height: 100%;
-    /*Sets the scrollable area to 100% of the viewport*/
     overflow: auto;
     overflow-x: hidden;
     background-color: #4c4c67;
@@ -40,7 +39,16 @@ h2.projecthead {
     border: 1px solid #ccc;
     border-radius: 10px;
     background: #fff;
+    background-position: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* color: white; */
+    background: linear-gradient(135deg, #c7d6c4, #fafaff);
 }
 
 .project-title {
@@ -62,6 +70,11 @@ h2.projecthead {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
 }
 
 .btn-github {
@@ -69,29 +82,43 @@ h2.projecthead {
     color: #fff;
 }
 
+.btn-github:hover {
+    background: #333;
+}
+
 .btn-demo {
     background: #28a745;
     color: #fff;
 }
+
+.btn-demo:hover {
+    background: #218838;
+}
+
 .project-skills {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 10px;
-  }
-  
-  .skill-icon {
+}
+
+.skill-icon {
     padding: revert;
-    /* width: 24px; */
-    /* height: 24px; */
     background: darkseagreen;
     margin-right: 5px;
+    text-transform: uppercase;
     border: none;
     border-radius: 3px;
     color: #f9f9f9;
     font-size: 17px;
     padding: 7px;
     margin: 3px;
-  }
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.skill-icon:hover {
+    background: #a4bfa4;
+    transform: scale(1.1);
+}
 
 /* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {

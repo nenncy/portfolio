@@ -1,22 +1,18 @@
 .experiencebg {
     height: 100%;
-    /*Sets the scrollable area to 100% of the viewport*/
     overflow: auto;
     overflow-x: hidden;
-    /* background-color: #4c4c67; */
     background-color: #c7d6c4;
-    ;
     padding-top: 40px;
 }
-
 
 h2.exprproject {
     text-align: center;
     padding-bottom: 15px;
 }
+
 .experiencecontainer.container {
     padding-bottom: 22px;
-    /* padding-bottom: 20px; */
 }
 
 .experience-container {
@@ -27,6 +23,13 @@ h2.exprproject {
     border-radius: 10px;
     background: #fefefe;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.experience-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #cecfd4, #dfe4db);
 }
 
 .experience-header {
@@ -40,6 +43,11 @@ h2.exprproject {
     height: 80px;
     margin-right: 20px;
     border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.experience-logo:hover {
+    transform: rotate(10deg);
 }
 
 .experience-company {
@@ -127,6 +135,12 @@ h2.exprproject {
     background-color: white;
     position: relative;
     border-radius: 6px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.content:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.02);
 }
 
 .content h2,
@@ -192,14 +206,12 @@ h2.exprproject {
     }
 
     .experience-role {
-
         font-size: 15px;
     }
 
     .experience-dates {
         font-size: 10px;
     }
-
 
     .timeline-container::after {
         left: 30px;
