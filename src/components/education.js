@@ -1,4 +1,5 @@
 import React from "react";
+import {Container} from "react-bootstrap";
 import "../components/Styles/education.css";
 import { Card, Button } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
@@ -7,6 +8,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 export const Education = () => {
   return (
+    <Card>
     <div className="educationbg">
       <h2 className="educationname">EDUCATION</h2>
       <div className="edudiv">
@@ -38,5 +40,6 @@ export const Education = () => {
         {/* </ScrollAnimation> */}
       </div>
     </div>
+    </Card>
   );
 };

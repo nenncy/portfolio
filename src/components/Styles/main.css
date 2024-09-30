@@ -8,6 +8,11 @@
 
   padding-top: 90px;
 }
+#particles-container {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust the height as needed */
+}
 
 h1.myinfo {
   color: #9d9999;
@@ -38,6 +43,13 @@ h1.headproject {
   flex-wrap: nowrap;
   align-content: flex-start;
   justify-content: space-around;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: animate 2s infinite ease alternate;
 }
 
 .row {

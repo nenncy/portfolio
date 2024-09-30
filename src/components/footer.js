@@ -1,10 +1,11 @@
 import React from "react";
 import "../components/Styles/footer.css";
 import myimage from "../components/images/nency.png";
-import { Container } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 
 export const Footer = () => {
   return (
+    <Card>
     <div className="footer">
       <Container>
         <div className="footer-container">
@@ -47,5 +48,6 @@ export const Footer = () => {
         </div>
       </Container>
     </div>
+    </Card>
   );
 };

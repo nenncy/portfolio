@@ -3,6 +3,7 @@ import { Col, Row, Card, Button, Container } from "react-bootstrap";
 import "../components/Styles/experience.css";
 import ScrollAnimation from "react-animate-on-scroll";
 import iit from "../components/images/iit_seal.png";
+import hyp from "../components/images/hyp.jpeg"
 import infilon from "../components/images/infilon.jpeg";
 import esmsys from "../components/images/esmsys.jpeg";
 import pruthatek from "../components/images/pruthatek.jpeg";
@@ -11,6 +12,16 @@ import sparks from "../components/images/sparks.jpeg";
 
 export const Experience = () => {
   const experiences = [
+    {
+      company: "Hyphenova Network",
+      role: "Software Devloper Intern",
+      dates: "Sep 2024 - Present",
+      description: `Currently Developing cross-platform mobile and web applications using FlutterFlow for front-end and Python FastAPI for back-end, ensuring seamless
+integration and responsiveness, which boosts user engagement.
+Collaborating with teams and using Supabase for efficient database integration, while refining UI/UX design and optimizing app performance for faster load times
+and smoother user experiences`,
+      logo: `${hyp}`,
+    },
     {
       company: "Illinois Institute of Technology",
       role: "Graduate Teaching Assistant",
@@ -57,6 +68,7 @@ export const Experience = () => {
 
 
   return (
+    <Card>
     <div className="experiencebg">
       <Container className="experiencecontainer">
         <h2 className="exprproject">EXPERIENCE</h2>
@@ -91,5 +103,6 @@ export const Experience = () => {
       </div>
         </Container>
     </div>
+    </Card>
   );
 };

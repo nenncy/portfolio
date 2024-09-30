@@ -1,6 +1,6 @@
 import React from "react";
 import "../components/Styles/skill.css";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container ,Card} from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPython,
@@ -18,6 +18,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 export const Skill = () => {
   return (
+    <Card>
     <div className="skillsbg">
       <Container>
         <div className="nameproject">
@@ -132,5 +133,6 @@ export const Skill = () => {
         </Row>
       </Container>
     </div>
+    </Card>
   );
 };

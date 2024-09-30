@@ -18,9 +18,7 @@ function App() {
     <>
     
     <Header></Header>
-    {/* <Main></Main> */}
     <About></About>
-    {/* <ParticlesBg color="#ff0000" num={200} type="circle" bg={true} /> */}
     <Skill></Skill>
     <Education></Education>
     <Experience></Experience>

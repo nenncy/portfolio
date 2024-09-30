@@ -1,20 +1,8 @@
 import React from "react";
 import "../components/Styles/project.css";
-import { Row, Col, Container, Button } from "react-bootstrap";
+import { Row, Col, Container, Button , Card} from "react-bootstrap";
 import ScrollAnimation from "react-animate-on-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPython,
-  faJsSquare,
-  faReact,
-  faAws,
-  faDocker,
-  faGithub,
-  faNodeJs,
-  faHtml5,
-  faCss3Alt,
-} from "@fortawesome/free-brands-svg-icons";
-import { SiPostgresql, SiMongodb, SiMysql, SiSqlite } from "react-icons/si";
 
 export const Project = () => {
   const projects = [
@@ -80,7 +68,6 @@ export const Project = () => {
     <>
       <div className="projectbg">
         <h2 className="projecthead">PROJECT</h2>
-
         <Container>
           <Row>
             <Col>

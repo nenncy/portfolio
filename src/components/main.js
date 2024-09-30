@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{ useCallback } from "react";
 import Wave from "react-wavify";
 import "./Styles/main.css";
 import { Button, Container } from "react-bootstrap";
@@ -14,17 +14,130 @@ import { TypeAnimation } from "react-type-animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import githubIcon from "../components/images/github.svg";
 import linkdinIcon from "../components/images/linkedin-in.svg";
-import ParticlesBg from 'particles-bg'
+// import Particles from "react-particles";
+import { useEffect, useMemo, useState } from "react";
+import { loadFull } from "tsparticles"; 
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 
 
 
 export const Main = () => {
+  const [init, setInit] = useState(false);
+
+  // this should be run only once per application lifetime
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+      // starting from v2 you can add only the features you need reducing the bundle size
+      //await loadAll(engine);
+      //await loadFull(engine);
+      await loadSlim(engine);
+      //await loadBasic(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+
+  const options = useMemo(
+    () => ({
+      background: {
+        color: {
+          value: "#4c4c67",
+        },
+      },
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: true,
+            mode: "push",
+          },
+          onHover: {
+            enable: true,
+            mode: "repulse",
+          },
+        },
+        modes: {
+          push: {
+            quantity: 4,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: "#ffffff",
+        },
+        links: {
+          color: "#ffffff",
+          distance: 150,
+          enable: true,
+          opacity: 0.5,
+          width: 1,
+        },
+        move: {
+          direction: "none",
+          enable: true,
+          outModes: {
+            default: "bounce",
+          },
+          random: false,
+          speed: 6,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 80,
+        },
+        opacity: {
+          value: 0.5,
+        },
+        shape: {
+          type: "circle",
+        },
+        size: {
+          value: { min: 1, max: 5 },
+        },
+      },
+      detectRetina: true,
+    }),
+    [],
+  );
+
+  // if (init) {
+  //   return (
+     
+  //   );
+  // }
+  // else{
+
   return (
     <div>
        <div className="mainbg">
+      
+      {/* <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      /> */}
+    
     {/* <Container> */}
       <div id="home">
         <div className="hero">
+          
           <Row>
             <Col>
               <div className="mypitch">
@@ -84,7 +197,8 @@ export const Main = () => {
               
             </Col>
             <Col>
-                <ScrollAnimation animateIn='bounceInRight'>
+          
+                {/* <ScrollAnimation animateIn='bounceInRight'> */}
               <div className="myimage">
               {/* <video loop muted autoPlay>
                     <source src={path} type="video/mp4"></source>
@@ -92,7 +206,7 @@ export const Main = () => {
                 </video> */}
                 <img className="img-nency" src={illustration}></img>
               </div>
-              </ScrollAnimation>
+              {/* </ScrollAnimation> */}
             </Col>
           </Row>
           {/* <Wave mask="url(#mask)" fill="#c7d6c4" >
@@ -181,4 +295,5 @@ export const Main = () => {
     </div>
    
   );
+// }
 };
