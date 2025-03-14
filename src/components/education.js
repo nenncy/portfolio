@@ -1,21 +1,26 @@
-import React from "react";
+import React,{forwardRef} from "react";
 import {Container} from "react-bootstrap";
 import "../components/Styles/education.css";
 import { Card, Button } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
+import Aos from "aos";
 import ScrollAnimation from "react-animate-on-scroll";
 
 
-export const Education = () => {
+export const Education = forwardRef((props, ref) => {
   return (
     <Card>
-    <div className="educationbg">
-      <h2 className="educationname">EDUCATION</h2>
+    <div className="educationbg" ref={ref}>
+      {/* <h2 className="educationname">EDUCATION</h2> */}
+      <div className="header-container" data-aos="zoom-out">
+      <div className="header-background">Acedemic</div>
+      <h1 className="header-foreground">Education</h1>
+    </div>
       <div className="edudiv">
         {/* <ScrollAnimation animateIn="bounceInRight"> */}
         <Row className="edurow">
           <Col>
-            <Card className="educationcard">
+            <Card className="educationcard" data-aos="zoom-out">
               {/* <Card.Header>Univercity</Card.Header> */}
               <Card.Body>
                 <Card.Title>Masters of Computer Science</Card.Title>
@@ -26,7 +31,7 @@ export const Education = () => {
             </Card>
           </Col>
           <Col>
-            <Card className="educationcard">
+            <Card className="educationcard" data-aos="zoom-out">
               {/* <Card.Header>Univercity</Card.Header> */}
               <Card.Body>
                 <Card.Title>Bachelor of Computer Engineering</Card.Title>
@@ -42,4 +47,4 @@ export const Education = () => {
     </div>
     </Card>
   );
-};
+});

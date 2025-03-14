@@ -1,0 +1,79 @@
+.about-section {
+    padding: 60px 0;
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+
+  }
+  
+  .profile-img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    filter: grayscale(100%);
+  }
+  
+  .title {
+    font-weight: bold;
+    color: #1a1a1a;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  .custom-btn {
+    background: pink;
+    border: none;
+    color: black;
+    margin: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 5px;
+  }
+  
+
+  .intro{
+    background: white;
+  }
+  .about-section{
+    /* background:#ffefef; */
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 768px) {
+  
+    .description {
+      font-size: 0.9rem;
+      color: #444;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    
+    .description {
+      font-size: 0.7rem !important;
+  
+    }
+    .title {
+      margin-top: 20px;
+       font-size: 0.9rem !important;
+  }
+  a.custom-btn.btn.btn-primary.aos-init.aos-animate {
+    padding: 5px;
+    margin: 5px;
+    font-size: x-small;
+}
+  }
+
+  a.custom-btn.btn.btn-primary.aos-init.aos-animate:hover {
+    /* color: pink; */
+    background: pink;
+    color: black;
+}
+
+.custom-btn :hover{
+  background: pink;
+}

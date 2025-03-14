@@ -3,34 +3,38 @@
     /* 100% of the viewport height */
     width: 100vw;
     /* 100% of the viewport width */
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+
 
 }
 
 .navbarclass {
-    background: #c7d6c4;
+    background:pink;
+}
+a.navbar-brand {
+    /* color: black; */
+    color: pink;
 }
 
 .navbar.colorChange {
-    background: linear-gradient(135deg, #c7d6c4, #4c4c67);
+    /* background: linear-gradient(135deg, #c7d6c4, #4c4c67); */
     /* height: 10vh; */
     /* 100% of the viewport height */
+    background: rgba(255, 255, 255, 0.1); /* Transparent white */
+  backdrop-filter: blur(10px); /* Blurred background */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
     width: 100vw;
     text-transform: uppercase;
     font-size: 20px;
 }
 
-.navbarlink:hover {
-    color: rgba(115, 214, 222, 0.8) !important;
-    filter: brightness(0.6);
-    -webkit-animation: circle 1.5s ease-in forwards;
 
-}
 
 .navbarlink {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    color: #0b0b0b !important;
+    color: pink !important;
     padding: 0.6rem;
     font-weight: 500;
     transition: filter 0.25s;
@@ -39,6 +43,7 @@
 nav.navbarclass.navbar.navbar-expand-lg.navbar-light.fixed-top {
     /* height: 86px; */
     /* height: 10vh; */
+    background: transparent;
     font-size: 20px;
     text-transform: uppercase;
 }

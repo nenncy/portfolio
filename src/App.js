@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { useRef } from 'react';
 import { BrowserRouter,Router } from 'react-router-dom';
 import { Header } from './components/Header/header';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,20 +12,37 @@ import { Education } from './components/education';
 import { Experience } from './components/experience';
 import { Project } from './components/project';
 import { Footer } from './components/footer';
-import ParticlesBg from 'particles-bg';
+import "aos/dist/aos.css";
 
 function App() {
+  const aboutRef = useRef(null);
+  const skillRef = useRef(null);
+  const educationRef = useRef(null);
+  const projectRef = useRef(null);
+  const experienceRef = useRef(null);
+
+  const scrollToSection = (section) => {
+    const refs = {
+      about: aboutRef,
+      skill: skillRef,
+      experience : experienceRef,
+      education: educationRef,
+      project: projectRef,
+
+    };
+
+    refs[section]?.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
-    
-    <Header></Header>
-    <About></About>
-    <Skill></Skill>
-    <Education></Education>
-    <Experience></Experience>
-    <Project></Project>
-    <Footer></Footer>
-    
+    <Header scrollToSection={scrollToSection}></Header>
+    <About ref={aboutRef}></About>
+    <Skill ref={skillRef}></Skill>
+    <Education ref= {educationRef}></Education>
+    <Experience ref= {experienceRef}></Experience>
+    <Project ref={projectRef}></Project>
+    <Footer></Footer> 
     </>
   );
 }

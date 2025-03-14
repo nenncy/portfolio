@@ -1,138 +1,113 @@
-import React from "react";
+import React, { useState, useEffect, useRef, forwardRef } from "react";
 import "../components/Styles/skill.css";
-import { Row, Col, Container ,Card} from "react-bootstrap";
+import { Row, Col, Container, Card, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPython,
-  faJsSquare,
-  faReact,
-  faAws,
-  faDocker,
-  faGithub,
-  faNodeJs,
-  faHtml5,
-  faCss3Alt,
-} from "@fortawesome/free-brands-svg-icons";
 import { SiPostgresql, SiMongodb, SiMysql, SiSqlite } from "react-icons/si";
-import ScrollAnimation from "react-animate-on-scroll";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import { motion, MotionValue, useScroll, useSpring, useTransform } from "motion/react"
+import Aos from "aos";
 
-export const Skill = () => {
+
+
+const SkillBar = ({ name, percentage }) => {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setWidth(percentage);
+    }, 500); // Start animation after mounting
+  }, [percentage]);
+
   return (
-    <Card>
-    <div className="skillsbg">
-      <Container>
-        <div className="nameproject">
-          <h2 className="headskill">SKILLS</h2>
-        </div>
-
-        <Row className="skillrow">
-          <Col>
-            <div className="skills-section">
-              {/* <h2>Technical Skills</h2> */}
-              <div className="skills-category">
-                <h3>Frontend Development</h3>
-                <div className="icon-grid">
-                  <div className="icon-item">
-                    <FontAwesomeIcon icon={faHtml5} />
-                    HTML5
-                  </div>
-                  <div className="icon-item">
-                    <FontAwesomeIcon icon={faCss3Alt} />
-                    CSS3
-                  </div>
-                  <div className="icon-item">
-                    <FontAwesomeIcon icon={faJsSquare} />
-                    JavaScript
-                  </div>
-                  <div className="icon-item">
-                    <FontAwesomeIcon icon={faReact} />
-                    ReactJS
-                  </div>
-                </div>
-              </div>
-              <div className="skills-category">
-                <h3>Backend Development</h3>
-                <div className="icon-grid">
-                  <div className="icon-item">
-                    <FontAwesomeIcon icon={faNodeJs} />
-                    NodeJS
-                  </div>
-                  <div className="icon-item">
-                    <FontAwesomeIcon icon={faPython} />
-                    Python
-                  </div>
-                  <div className="icon-item">
-                    <FontAwesomeIcon icon={faDocker} />
-                    Docker
-                  </div>
-                </div>
-              </div>
-              <div className="skills-category">
-                <h3>Database Skills</h3>
-                <div className="icon-grid">
-                  <div className="icon-item">
-                    <SiPostgresql size={40} />
-                    <span>PostgreSQL</span>
-                  </div>
-                  <div className="icon-item">
-                    <SiMongodb size={40} />
-                    <span>MongoDB</span>
-                  </div>
-                  <div className="icon-item">
-                    <SiMysql size={40} />
-                    <span>MySQL</span>
-                  </div>
-                  <div className="icon-item">
-                    <SiSqlite size={40} />
-                    <span>SQLite</span>
-                  </div>
-                </div>
-              </div>
-              <div className="skills-category">
-                <h3>Other Skills</h3>
-                <div className="icon-grid">
-                  <div className="icon-item">
-                    <FontAwesomeIcon icon={faAws} />
-                    AWS
-                  </div>
-                  <div className="icon-item">
-                    <FontAwesomeIcon icon={faGithub} />
-                    GitHub
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Col>
-
-          <Col>
-            <h2>What I do</h2>
-            <p className="description">
-              Passionate full stack developer with a focus on building scalable
-              and efficient applications.
-            </p>
-            <ul className="skills-text">
-              <li>
-                ⚡ Building responsive single-page applications with React
-              </li>
-              <li>
-                ⚡ Developing interactive web interfaces with JavaScript, HTML,
-                and CSS
-              </li>
-              <li>⚡ Creating static websites using Next.js</li>
-              <li>
-                ⚡ Developing server-side applications with Node.js and Express
-              </li>
-              <li>
-                ⚡ Deploying applications using Vercel,Github and AWS services
-              </li>
-              <li>⚡ Designing and managing databases with PostgreSQL</li>
-              <li>⚡ Developing scalable solutions with MongoDB</li>
-              <li>⚡ Writing efficient queries with SQL and MySQL</li>
-            </ul>
-          </Col>
-        </Row>
-      </Container>
+    <div className="skill">
+      <div className="skill-title">
+        <span>{name}</span>
+        <span>{percentage}%</span>
+      </div>
+      <div className="skill-bar">
+        <div className="skill-fill" style={{ width: `${width}%` }}></div>
+      </div>
     </div>
-    </Card>
   );
 };
+
+
+// const skillsData = [
+//   { name: "HTML5", icon: <FontAwesomeIcon icon={faHtml5} size="2x" /> },
+//   { name: "CSS3", icon: <FontAwesomeIcon icon={faCss3Alt} size="2x" /> },
+//   { name: "JavaScript", icon: <FontAwesomeIcon icon={faJsSquare} size="2x" /> },
+//   { name: "ReactJS", icon: <FontAwesomeIcon icon={faReact} size="2x" /> },
+//   { name: "NodeJS", icon: <FontAwesomeIcon icon={faNodeJs} size="2x" /> },
+//   { name: "Python", icon: <FontAwesomeIcon icon={faPython} size="2x" /> },
+//   { name: "Docker", icon: <FontAwesomeIcon icon={faDocker} size="2x" /> },
+//   { name: "PostgreSQL", icon: <SiPostgresql size={40} /> },
+//   { name: "MongoDB", icon: <SiMongodb size={40} /> },
+//   { name: "MySQL", icon: <SiMysql size={40} /> },
+//   { name: "SQLite", icon: <SiSqlite size={40} /> },
+//   { name: "AWS", icon: <FontAwesomeIcon icon={faAws} size="2x" /> },
+//   { name: "GitHub", icon: <FontAwesomeIcon icon={faGithub} size="2x" /> }
+// ];
+
+
+const skillsData = [
+  { name: "JavaScript", percentage: 90 },
+  { name: "TypeScript", percentage: 75 },
+  { name: "jQuery", percentage: 75 },
+  { name: "HTML5", percentage: 85 },
+  { name: "CSS3", percentage: 80 },
+  { name: "WordPress", percentage: 60 },
+  { name: "PHP", percentage: 60 },
+  { name: "React.js", percentage: 85 },
+  { name: "Next.js", percentage: 75 },
+  { name: "Node.js", percentage: 80 },
+  { name: "Express.js", percentage: 75 },
+  { name: "FastAPI", percentage: 70 },
+  { name: "Flutter", percentage: 65 },
+  { name: "FlutterFlow", percentage: 60 },
+  { name: "GraphQL", percentage: 70 },
+  { name: "MongoDB", percentage: 80 },
+  { name: "PostgreSQL", percentage: 75 },
+  { name: "MySQL", percentage: 75 },
+  { name: "SQLite", percentage: 65 },
+  { name: "AWS", percentage: 70 },
+  { name: "GCP", percentage: 70 },
+  { name: "Docker", percentage: 75 },
+  { name: "Git", percentage: 85 },
+  { name: "GitHub", percentage: 85 },
+  { name: "CI/CD", percentage: 70 },
+  { name: "Postman", percentage: 75 },
+  { name: "Linux Shell Commands", percentage: 65 },
+  { name: "Agile Development", percentage: 80 },
+  { name: "Testing & Debugging", percentage: 85 }
+];
+
+
+
+
+export const Skill = forwardRef((props, ref) => {
+  return (
+
+    <div className="skillsbg" ref={ref}>
+      <div className="header-container">
+        <div className="header-background">Expertise</div>
+        <h1 className="header-foreground">Skills</h1>
+      </div>
+
+      <Container>
+        <div style={{
+          display: "grid",
+          marginBottom:"50px",
+          gridTemplateColumns: "repeat(2, 1fr)", // Creates two equal columns
+          gap: "20px" // Adds spacing between items
+        }}>
+          {skillsData.map((skill, index) => (
+            <SkillBar key={index} name={skill.name} percentage={skill.percentage} />
+          ))}
+        </div>
+      </Container>
+    </div>
+
+  );
+});

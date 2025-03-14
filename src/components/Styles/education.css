@@ -1,10 +1,13 @@
 .educationbg {
-  height: 100%; /*Sets the scrollable area to 100% of the viewport*/
-  overflow: auto; 
+  height: 100%;
+  /*Sets the scrollable area to 100% of the viewport*/
+  overflow: auto;
   overflow-x: hidden;
-  background-color: #4c4c67;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  max-height: max-content;
+  background-color: white;
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+  padding-top: 40px;
+  padding-bottom: 50px;
 }
 
 h2.educationname {
@@ -26,23 +29,27 @@ h2.educationname {
 .educationcard.card {
   color: var(--clr-neutral-100);
   background-size: cover;
-  background: #fefefe;
+  background: transparent;
+  color: black;
+  margin: 40px;
+  border: 2px solid pink;
   padding: 1rem 0 0;
   max-width: 70ch;
   border-radius: 0.5rem;
   overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
 }
 
 .educationcard.card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(135deg, #fefefe, #dfe4db);
+  background: linear-gradient(135deg, #fefefe,pink);
 }
 
 button.statusbtn.btn.btn-primary {
-  color: white;
-  background: #28a745;
+  color: black;
+  background: pink;
   border: none;
   margin-right: 20px;
   transition: background-color 0.3s, transform 0.3s;
@@ -73,37 +80,86 @@ button.gpabtn.btn.btn-primary:hover {
 /* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
   .educationcard.card {
-      margin-bottom: 8px;
+    margin-bottom: 8px;
   }
 
   .edurow {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-content: center;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
   }
 
   button.statusbtn.btn.btn-primary {
-      margin-bottom: 10px;
+    margin-bottom: 10px;
   }
 }
 
 /* Additional responsive design for very small screens */
 @media screen and (max-width: 480px) {
   .educationcard.card {
-      max-width: 100%;
+    max-width: 100%;
+    font-size: x-small;
   }
-
+  .educationcard.card.aos-init.aos-animate {
+    font-size: x-small;
+}
+.card-title.h5 {
+  font-size: medium;
+}
   h2.educationname {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   button.statusbtn.btn.btn-primary,
   button.gpabtn.btn.btn-primary {
-      margin-bottom: 10px;
-      width: 100%;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: x-small;
   }
+
+  .header-background {
+    font-size: 40px !important;
+
+  }
+
+  .header-foreground {
+    font-size: 40px !important;
+
+  }
+
+}
+
+.header-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+
+}
+
+.header-background {
+  font-size: 90px;
+  font-weight: 900;
+  color: rgb(149 135 137 / 30%);
+  /* Light pastel pink */
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.header-foreground {
+  font-size: 80px;
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+  font-weight: bold;
+  color: #f97393;
+  /* Vibrant pink */
+  position: relative;
+  z-index: 1;
 }

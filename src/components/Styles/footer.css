@@ -1,5 +1,8 @@
 .footer {
-    background: linear-gradient(135deg, #c7d6c4, #4c4c67);
+    /* background: linear-gradient(135deg,pink, #121212); */
+    background: pink;
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+
 }
 
 .footer-container {
@@ -77,6 +80,11 @@ p.sayhello {
         align-items: center;
         text-align: center;
         padding: 20px;
+        font-size: x-small;
+    }
+    .footer-content h2 {
+        margin-top: 0;
+        font-size: small;
     }
 
     .footer-content {

@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
+
+
 .mainbg {
   height: 100%;
   /*Sets the scrollable area to 100% of the viewport*/
   overflow: auto;
   overflow-x: hidden;
-  background-color: #4c4c67;
+  /* background-color: #4c4c67; */
   /* background:linear-gradient(135deg, #d2e5d5, #87cefa); */
-
+  background-image: url('../images//background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   padding-top: 90px;
 }
 #particles-container {
@@ -77,18 +83,23 @@ h1.headproject {
 
 }
 
-.resume {
-  padding: 10px 0px 10px 21px;
-}
-
-button.resumebtn.btn.btn-primary {
+/* button.resumebtn.btn.btn-primary {
   background: #C4D6C7;
   color: black;
+} */
+
+.fancy{
+  margin-top: 30px;
+  padding: 20px;
+  width: fit-content;
+}
+button.resumebtn.btn.btn-primary {
+  /* background: white; */
+  color: black;
+  /* border: 3px solid #ffc0cb; */
 }
 
 /* Media query for screens smaller than 768px (standard tablets) */
-
-
 
 img.img-nency {
   width: 30em;
@@ -143,9 +154,7 @@ a.sociallink {
   .social-media {
     padding-left: 0;
   }
-  .resume{
-    padding-left: 0;
-  }
+  
 
   img.img-nency {
     width: 19em;
@@ -161,3 +170,312 @@ a.sociallink {
   margin: 10px;
   border-radius: 13%;
 } */
+
+/* .main-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  background: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+} */
+/* 
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 10vw;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.1);
+  transform: translateY(-50%);
+  white-space: nowrap;
+  animation: scrollBackground 40s linear infinite;
+}
+
+.background1-text {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  font-size: 10vw;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.1);
+  transform: translateY(-50%);
+  white-space: nowrap;
+  animation: scrollBackground 40s linear infinite;
+}
+.background2-text {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  font-size: 10vw;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.1);
+  transform: translateY(-50%);
+  white-space: nowrap;
+  animation: scrollBackground 40s linear infinite;
+}
+
+
+@keyframes scrollBackground {
+  from {
+    transform: translateY(-50%) translateX(100%);
+  }
+  to {
+    transform: translateY(-50%) translateX(-100%);
+  }
+}
+
+.foreground-content {
+  z-index: 2;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 600px;
+} */
+
+
+/* General container styles */
+
+p.brandname{
+  font-size: 142px;
+  -webkit-text-stroke: 3px #ffc0cb;
+  color: white;
+}
+
+/* Each letter */
+.letter {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Magnify effect for hovered letter */
+.magnify {
+  transform: scale(2); /* Increase only the hovered letter */
+  color: white; /* Change color to highlight */
+}
+
+p.typedtext{
+  padding: 30px;
+}
+.description1 {
+  font-size: 2.2rem;
+  max-width: 70%;
+  text-align: center;
+  margin-top: 20px;
+  transition: opacity 0.5s ease-in-out;
+  color: rgb(249, 246, 246);
+}
+
+.image-container {
+  flex: 1; /* Ensures image doesn’t shrink and aligns correctly */
+  display: flex;
+  width: 350px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .content {
+    max-width: 100%;
+  }
+  .image-container {
+    max-width: 80%;
+  }
+}
+
+.main-container {
+  position: relative;
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  /* background: linear-gradient(to bottom, #CBD9C6, #4c4c67); */
+  /* background: #121212; */
+  /* background-image: url('../images//background.jpg'); */
+ 
+padding-top: 90px;
+  display: flex; /* Use flexbox for centering */
+  justify-content: center;
+  flex-direction: column; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+.main-container::before{
+  content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images//background.jpg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    filter: blur(1px); /* Blurs the background */
+    z-index: -2;
+}
+.main-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(39, 39, 39, 0.5); /* Dark semi-transparent overlay */
+  z-index: -1;
+}
+/* Mobile-Friendly Adjustments */
+@media (max-width: 480px) {
+  h1.headproject {
+    font-size: 28px;
+  }
+
+  h1.myinfo {
+    font-size: 14px;
+  }
+
+  img.img-nency {
+    width: 15em;
+    height: 15em;
+  }
+
+  .mypitch {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .image-container {
+    max-width: 100%;
+  }
+
+  .description1 {
+    font-size: 1.5rem;
+    max-width: 90%;
+  }
+
+  p.brandname {
+    font-size: 40px;
+    -webkit-text-stroke: 2px #c3d5c0;
+  }
+}
+
+
+/* Dark background with subtle grid */
+.grid-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a0a0a; /* Deep dark blue/black */
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px; /* Adjust grid size */
+  z-index: -1;
+}
+
+
+
+/* Animation for scanning effect */
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+.fancy:hover{
+  background: white;
+}
+
+.fancy {
+  --offset: 3px;
+  background: rgb(55, 21, 90);
+  border-radius: 50px;
+  position: relative;
+  height: 75px;
+  width: 400px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Conic gradient */
+.fancy::before { 
+  content: '';
+  background: conic-gradient(transparent 270deg, pink, transparent);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  width: 100%;
+  animation: rotate 2s linear infinite;
+}
+
+/* Overlay */
+.fancy::after {
+  content: '';
+  background: white;
+  border-radius: inherit;
+  position: absolute;
+  inset: var(--offset);
+  height: calc(100% - 2 * var(--offset));
+  width: calc(100% - 2 * var(--offset));
+}
+
+.fancy .resumebtn {
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  padding: 1.5rem;
+}
+
+@keyframes rotate {
+  from {
+      transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+  }
+
+  to {
+      transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+  }
+}
+
+@media (max-width: 768px) {
+  .fancy {
+    height: 60px;
+    width: 90%; /* Adjust width to fit smaller screens */
+  }
+  
+  .fancy .resumebtn {
+    font-size: 0.9rem; /* Reduce font size for smaller screens */
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fancy {
+    height: 50px;
+    width: 80%;
+  }
+
+  .fancy .resumebtn {
+    font-size: 0.8rem;
+    padding: 0.8rem;
+  }
+}

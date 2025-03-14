@@ -11,23 +11,24 @@ import linkdinicon1 from "../images/linkedin1.svg"
 import githubIcon1 from "../images/github1.svg"
 import mailIcon from "../images/envelope-solid.svg"
 import mailIcon1 from "../images/envelope-solid1.svg"
+import { Button } from "react-bootstrap";
 
-export const Header = () => {
-  
-  const [colorChange, setColorchange] = useState(false);
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 80) {
-      setColorchange(true);
-    } else {
-      setColorchange(false);
-    }
-  };
-  window.addEventListener("scroll", changeNavbarColor);
+export const Header = ({ scrollToSection }) => {
+
+  // const [colorChange, setColorchange] = useState(false);
+  // const changeNavbarColor = () => {
+  //   if (window.scrollY >= 80) {
+  //     setColorchange(true);
+  //   } else {
+  //     setColorchange(false);
+  //   }
+  // };
+  // window.addEventListener("scroll", changeNavbarColor);
 
   return (
     <Navbar
       expand="lg"
-      className={colorChange ? "navbar colorChange" : "navbarclass"}
+      className="colorChange navbarclass"
       fixed="top"
     >
       <Container>
@@ -38,44 +39,51 @@ export const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="circle-justify-content-end">
-            <Nav.Link className="navbarlink" href="#home">
+            <Nav.Link className="navbarlink" >
             </Nav.Link>
-            <Nav.Link className="navbarlink" href="#about">
-            <a
-                  href="https://www.linkedin.com/in/nency-patel-68aa751a0/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="sociallink"
-                >
-                  <img
-                    className="socialicon"
-                    src={ colorChange ? linkdinIcon: linkdinicon1}
-                    alt="Linkedin"
-                  />
-                </a>
-            </Nav.Link>
-            <Nav.Link className="navbarlink" href="#project">
-              {" "}
-              <a
-                href="https://github.com/nenncy/"
-                target="_blank"
-                rel="noreferrer"
-                className="sociallink"
+            <Nav.Link className="navbarlink">
+              <button
+                onClick={() => scrollToSection("about")}
+                style={{ margin: "10px", color: "pink", background: "none", border: "none", cursor: "pointer" }}
               >
-                <img className="socialicon" src={colorChange ? githubIcon: githubIcon1} alt="GitHub" />
-              </a>
+                About
+              </button>
             </Nav.Link>
-    
-            <Nav.Link className="navbarlink" href="#resume">
-            <a
-                href="mailto:nencyvpatel3010@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-                className="sociallink"
+          
+            <Nav.Link className="navbarlink">
+              <button
+                onClick={() => scrollToSection("skill")}
+                style={{ margin: "10px", color: "pink", background: "none", border: "none", cursor: "pointer" }}
               >
-                <img className="socialicon" src={colorChange ? mailIcon1 : mailIcon} alt="GitHub" />
-              </a>
+                Skill
+              </button>
+            
             </Nav.Link>
+            <Nav.Link className="navbarlink">
+              <button
+                onClick={() => scrollToSection("education")}
+                style={{ margin: "10px", color: "pink", background: "none", border: "none", cursor: "pointer" }}
+              >
+                Education
+              </button>
+            </Nav.Link>
+            <Nav.Link className="navbarlink">
+              <button
+                onClick={() => scrollToSection("experience")}
+                style={{ margin: "10px", color: "pink", background: "none", border: "none", cursor: "pointer" }}
+              >
+                Experience
+              </button>
+            </Nav.Link>
+            <Nav.Link className="navbarlink">
+              <button
+                onClick={() => scrollToSection("project")}
+                style={{ margin: "10px", color: "pink", background: "none", border: "none", cursor: "pointer" }}
+              >
+                Project
+              </button>
+            </Nav.Link>
+           
           </Nav>
         </Navbar.Collapse>
       </Container>

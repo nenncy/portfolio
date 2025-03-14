@@ -2,7 +2,8 @@
     height: 100%;
     overflow: auto;
     overflow-x: hidden;
-    background-color: #c7d6c4;
+    background-color: #121212;
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
     padding-top: 40px;
 }
 
@@ -90,8 +91,8 @@ h2.exprproject {
 .timeline::after {
     content: '';
     position: absolute;
-    width: 6px;
-    background-color: #e9ecef;
+    width: 2px;
+    background-color: pink;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -257,3 +258,4 @@ h2.exprproject {
         font-size: 0.9rem;
     }
 }
+
