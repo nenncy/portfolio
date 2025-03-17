@@ -32,7 +32,7 @@ export const Intro = () => {
          
           <Button data-aos= "zoom-out" className="custom-btn" href='https://www.linkedin.com/in/nency-patel-68aa751a0/'> LinkedIn </Button >
           <Button data-aos= "zoom-out" className="custom-btn" href='mailto:nencyvpatel3010@gmail.com'> Email </Button >
-          <Button data-aos= "zoom-out" className="custom-btn" href='https://github.com/nenncy/'> LinkedIn </Button >
+          <Button data-aos= "zoom-out" className="custom-btn" href='https://github.com/nenncy/'> Github </Button >
           <Button data-aos= "zoom-out" className="custom-btn" href='https://medium.com/@nencyvpatel3010'> Blog </Button >
         </Col>
       </Row>

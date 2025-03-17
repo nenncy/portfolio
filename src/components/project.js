@@ -149,7 +149,7 @@ export const Project = forwardRef((props, ref) => {
   ];
 
   var settings = {
-    dots: isMobile ? true: false,
+    dots: false,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
     arrows: true,
