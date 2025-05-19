@@ -25,8 +25,8 @@ export const Education = forwardRef((props, ref) => {
               <Card.Body>
                 <Card.Title>Masters of Computer Science</Card.Title>
                 <Card.Text>Illinois Institute of Technology</Card.Text>
-                <Button className="statusbtn">AUG-23 - PRESENT</Button>
-                <Button className="gpabtn"> 3.66 / 4.00</Button>
+                <Button className="statusbtn">AUG-23 - MAY-25</Button>
+                <Button className="gpabtn"> 3.70 / 4.00</Button>
               </Card.Body>
             </Card>
           </Col>

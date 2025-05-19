@@ -115,7 +115,7 @@ export const Main = () => {
         style={{ fontSize: "1em", marginTop: "20px", maxWidth: "70%", textAlign: "center", color: "white", display: "inline-block" }}
       />
       <div className="fancy" data-aos="zoom-in">
-        <a href='/SWEI_Nencypatel.pdf' download>
+        <a href='/SWE_Nency_Patel.pdf' download>
           <Button className="resumebtn">
             RESUME
           </Button>
