@@ -96,6 +96,10 @@ p.sayhello {
     .footer-image-container {
         margin-top: 20px;
     }
+    /* .footer-image-container myimage{
+        width: 250px;
+        height: 50px;
+    } */
 
     .footer-location {
         justify-content: center;

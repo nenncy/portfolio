@@ -37,3 +37,32 @@
     transform: rotate(360deg);
   }
 }
+
+/* Change header background */
+.rcw-header {
+  background-color: pink !important; /* Change to your desired color */
+  color: #fff !important;
+}
+
+/* Launcher button background */
+.rcw-launcher {
+  background-color: pink !important;
+}
+
+/* User message bubble */
+.rcw-message .rcw-client {
+  background-color: whitesmoke !important;
+  color: #000;
+}
+
+/* Bot message bubble */
+.rcw-message .rcw-response {
+  background-color: whitesmoke !important;
+  color: #333;
+}
+
+/* Input area styling */
+.rcw-new-message {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}

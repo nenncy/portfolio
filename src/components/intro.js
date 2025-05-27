@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row,Col , Button} from 'react-bootstrap'
-import myimage from './images/nency-new.jpg'
+import myimage from './images/cropped_img.JPG'
 import './Styles/intro.css'
 import Aos from 'aos'
 import linkdinIcon from "./images/linkedin-in.svg";
@@ -14,7 +14,7 @@ export const Intro = () => {
       <Row className="align-items-center">
         {/* Left Column - Image */}
         <Col md={5} className="text-center" data-aos= "zoom-out">
-          <img src={myimage} alt="Jules" className="profile-img" />
+          <img src={myimage} alt="Nency" className="profile-img" />
         </Col>
 
         {/* Right Column - Text */}
