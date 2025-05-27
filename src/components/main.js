@@ -6,8 +6,6 @@ import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { BrowserRouter } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
-import ScrollAnimation from "react-animate-on-scroll";
-import { motion } from "framer-motion";
 import illustration from "../components/images/illustration.svg";
 import { Card } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
@@ -15,12 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import githubIcon from "../components/images/github.svg";
 import linkdinIcon from "../components/images/linkedin-in.svg";
 import { useEffect, useMemo, useState } from "react";
-import { loadFull } from "tsparticles";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
-import { Canvas } from "@react-three/fiber";
 import robotImage from './images/robot.png'
-import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import AOS from "aos";
 import backgroundImg from './images/background.jpg'
 
