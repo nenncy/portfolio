@@ -9,9 +9,7 @@ import { NavHashLink } from "react-router-hash-link";
 import illustration from "../components/images/illustration.svg";
 import { Card } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import githubIcon from "../components/images/github.svg";
-import linkdinIcon from "../components/images/linkedin-in.svg";
+
 import { useEffect, useMemo, useState } from "react";
 import robotImage from './images/robot.png'
 import AOS from "aos";
