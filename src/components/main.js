@@ -2,18 +2,10 @@ import React, { useCallback } from "react";
 import Wave from "react-wavify";
 import "./Styles/main.css";
 import { Button, Container } from "react-bootstrap";
-import { Row } from "react-bootstrap";
-import { Col } from "react-bootstrap";
-import { BrowserRouter } from "react-router-dom";
-import { NavHashLink } from "react-router-hash-link";
-import illustration from "../components/images/illustration.svg";
 import { Card } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
-
 import { useEffect, useMemo, useState } from "react";
-import robotImage from './images/robot.png'
 import AOS from "aos";
-import backgroundImg from './images/background.jpg'
 
 
 export const Main = () => {
