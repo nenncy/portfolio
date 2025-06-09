@@ -21,12 +21,14 @@ export const Intro = () => {
         <Col md={7} data-aos= "zoom-out">
           <h2 className="title">I'm Nency, Passionate Software Developer & Tech Enthusiast</h2>
           <p className="description">
-          Master’s student in Computer Science at Illinois Tech, with 2+ years of experience in full-stack development. I specialize in React.js, Node.js, and API-driven applications, crafting scalable and user-friendly solutions. Passionate about technology and innovation, I enjoy exploring new tools and frameworks to enhance development efficiency.
+          I’m a recent Computer Science graduate from Illinois Institute of Technology with 2+ years of experience in full-stack development. I specialize in building scalable, user-friendly applications using React.js, Node.js, and RESTful APIs.
 
+I thrive on solving real-world problems with clean code and efficient design. I'm always exploring new tools and frameworks to stay ahead in the fast-paced world of tech.
+🎶 Beyond coding, I’m passionate about live music, dancing, and discovering new sounds. 🎨 In my free time, I enjoy painting, taking walks to recharge, and finding creativity in the world around me.
 
           </p>
           <p className="description">
-          Connect with me on LinkedIn, GitHub, or Medium where I share insights on software development and best coding practices.
+          Let’s connect! I share thoughts on software development, coding best practices, and career growth on LinkedIn, GitHub, and Medium.
           </p>
 
          
