@@ -13,8 +13,7 @@ import { Experience } from './components/experience';
 import { Project } from './components/project';
 import { Footer } from './components/footer';
 import "aos/dist/aos.css";
-// import { Widget, addResponseMessage } from 'react-chat-widget';
-// import 'react-chat-widget/lib/styles.css';
+
 
 function App() {
   // const [chatWindowOpen, setChatWindowOpen] = useState(true);
