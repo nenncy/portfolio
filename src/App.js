@@ -17,8 +17,8 @@ import "aos/dist/aos.css";
 // import 'react-chat-widget/lib/styles.css';
 
 function App() {
-  const [chatWindowOpen, setChatWindowOpen] = useState(true);
-  const [context, setContext] = useState('');
+  // const [chatWindowOpen, setChatWindowOpen] = useState(true);
+  // const [context, setContext] = useState('');
 
   const aboutRef = useRef(null);
   const skillRef = useRef(null);
@@ -40,32 +40,32 @@ function App() {
   };
 
 
-  const handleToggle = (chatWindowOpen) => {
-    setChatWindowOpen(!chatWindowOpen);
-  };
+  // const handleToggle = (chatWindowOpen) => {
+  //   setChatWindowOpen(!chatWindowOpen);
+  // };
 
-  useEffect(() => {
-    addResponseMessage('Hi, You are talking to me!');
-  }, []);
+  // useEffect(() => {
+  //   addResponseMessage('Hi, You are talking to me!');
+  // }, []);
 
-  const handleNewUserMessageFun = async (message) => {
-    console.log("User said:", message);
-    // addResponseMessage("Thanks for reaching out! I’ll get back to you soon.");
+  // const handleNewUserMessageFun = async (message) => {
+  //   console.log("User said:", message);
+  //   // addResponseMessage("Thanks for reaching out! I’ll get back to you soon.");
 
-    try {
-      const res = await fetch('http://localhost:5000/api/geminiChat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message }),
-      });
+  //   try {
+  //     const res = await fetch('http://localhost:5000/api/geminiChat', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify({ message }),
+  //     });
 
-      const data = await res.json();
-      addResponseMessage(data?.reply);
-    } catch (error) {
-      console.error('Error talking to Gemini:', error);
-      addResponseMessage("Sorry, something went wrong.");
-    }
-  };
+  //     const data = await res.json();
+  //     addResponseMessage(data?.reply);
+  //   } catch (error) {
+  //     console.error('Error talking to Gemini:', error);
+  //     addResponseMessage("Sorry, something went wrong.");
+  //   }
+  // };
 
 return (
   <>
