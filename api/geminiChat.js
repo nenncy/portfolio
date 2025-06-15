@@ -1,6 +1,5 @@
-import fs from 'fs';
-import path from 'path';
-import pdf from 'pdf-parse';
+
+const pdf = require('pdf-parse');
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -39,7 +38,7 @@ Rules:
   - If greeted (e.g., "Hi", "Hey", "Hello"): Respond with a similar greeting.
 `;
 
-    const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY};
+    const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY};`
 
     const geminiResponse = await fetch(geminiEndpoint, {
       method: 'POST',
@@ -59,8 +58,11 @@ Rules:
     } else {
       res.status(500).json({ reply: 'No response from Gemini.' });
     }
+  
   } catch (err) {
     console.error('Error:', err);
     res.status(500).json({ error: 'Something went wrong' });
   }
 }
+  
+  
