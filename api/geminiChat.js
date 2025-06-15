@@ -35,7 +35,7 @@ Rules:
   - If greeted (e.g., "Hi", "Hey", "Hello"): Respond with a similar greeting.
 `;
 
-    const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY}`;
+    const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyCKtLRVU8RE2Y99V04MGQrgRd-tLys1MWI`;
 
     const geminiResponse = await fetch(geminiEndpoint, {
       method: 'POST',
