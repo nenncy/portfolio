@@ -10,8 +10,12 @@ export default async function handler(req, res) {
   try {
     const userMessage = req.body.message;
 
-    const pdfPath = path.join(process.cwd(), 'resume.pdf'); // PDF in root
-    const pdfBuffer = fs.readFileSync(pdfPath);
+    // const pdfPath = path.join(process.cwd(), 'resume.pdf'); // PDF in root
+    // const pdfBuffer = fs.readFileSync(pdfPath);
+    const resumeUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/resume_nency.pdf`; // e.g., http://localhost:3000/resume.pdf or deployed URL
+    const buffer = await fetch(resumeUrl).then(res => res.arrayBuffer());
+    const pdfBuffer = Buffer.from(buffer);
+
     const pdfData = await pdf(pdfBuffer);
     const resumeText = pdfData.text.slice(0, 5000); // Trim for token budget
 
@@ -35,7 +39,7 @@ Rules:
   - If greeted (e.g., "Hi", "Hey", "Hello"): Respond with a similar greeting.
 `;
 
-    const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyCKtLRVU8RE2Y99V04MGQrgRd-tLys1MWI`;
+    const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY};
 
     const geminiResponse = await fetch(geminiEndpoint, {
       method: 'POST',
