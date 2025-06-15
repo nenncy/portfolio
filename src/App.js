@@ -13,6 +13,7 @@ import { Experience } from './components/experience';
 import { Project } from './components/project';
 import { Footer } from './components/footer';
 import "aos/dist/aos.css";
+import ChatWidget from 'react-chatify';
 
 
 function App() {
@@ -38,6 +39,25 @@ function App() {
     refs[section]?.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+   const [messages, setMessages] = useState([
+    { text: "Hi! You can ask me anything.", sender: "bot" }
+  ]);
+
+  const handleUserMessage = async (message) => {
+    setMessages(prev => [...prev, { text: message, sender: "user" }]);
+    try {
+      const res = await fetch('/api/geminiChat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message }),
+      });
+      const data = await res.json();
+      setMessages(prev => [...prev, { text: data?.reply || "No response", sender: "bot" }]);
+    } catch (error) {
+      console.error('Error talking to Gemini:', error);
+      setMessages(prev => [...prev, { text: "Sorry, something went wrong.", sender: "bot" }]);
+    }
+  };
 
   // const handleToggle = (chatWindowOpen) => {
   //   setChatWindowOpen(!chatWindowOpen);
@@ -66,16 +86,21 @@ function App() {
   //   }
   // };
 
-return (
-  <>
-    <Header scrollToSection={scrollToSection}></Header>
-    <About ref={aboutRef}></About>
-    <Skill ref={skillRef}></Skill>
-    <Education ref={educationRef}></Education>
-    <Experience ref={experienceRef}></Experience>
-    <Project ref={projectRef}></Project>
-    <Footer></Footer>
-    {/* <Widget
+  return (
+    <>
+      <Header scrollToSection={scrollToSection}></Header>
+      <About ref={aboutRef}></About>
+      <Skill ref={skillRef}></Skill>
+      <Education ref={educationRef}></Education>
+      <Experience ref={experienceRef}></Experience>
+      <Project ref={projectRef}></Project>
+      <Footer></Footer>
+      <ChatWidget
+        title="Chat with me"
+        messages={messages}
+        onUserMessage={handleUserMessage}
+      />
+      {/* <Widget
       title="Chat with me"
       subtitle="Ask me anything!"
       handleToggle={handleToggle}
@@ -87,8 +112,8 @@ return (
       showFullScreenButton={true}
 
     ></Widget> */}
-  </>
-);
+    </>
+  );
 }
 
 export default App;
