@@ -124,8 +124,7 @@
   
 const express = require('express');
 const cors = require('cors');
-const fs = require('fs');
-const pdf = require('pdf-parse');
+
 
 const app = express();
 app.use(cors());
@@ -134,9 +133,7 @@ app.use(express.json());
 app.post('/api/geminiChat', async (req, res) => {
   try {
     const userMessage = req.body.message;
-    // const pdfBuffer = fs.readFileSync('./public/resume.pdf');
-    // const pdfData = await pdf(pdfBuffer);
-    // const resumeText = pdfData.text.slice(0, 5000);
+  
 
     const systemPrompt = `
     You are a helpful assistant representing Nency Patel, a Software Developer based in Chicago. Use only the following information from her resume to answer questions. Do not fabricate or infer beyond this data.
