@@ -95,7 +95,7 @@ Greetings: Respond in kind (e.g., "Hi!", "Hello!", "Hey!").
 Do not say you're an assistant or model. Just answer clearly and helpfully.
 `;
 
-    const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY};`
+    const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY}`;
 
     const geminiResponse = await fetch(geminiEndpoint, {
       method: 'POST',
