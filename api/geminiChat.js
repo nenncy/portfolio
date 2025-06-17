@@ -10,15 +10,6 @@ export default async function handler(req, res) {
   try {
     const userMessage = req.body.message;
 
-    // const pdfPath = path.join(process.cwd(), 'resume.pdf'); // PDF in root
-    // const pdfBuffer = fs.readFileSync(pdfPath);
-    const resumeUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/resume_nency.pdf`; // e.g., http://localhost:3000/resume.pdf or deployed URL
-    // const buffer = await fetch(resumeUrl).then(res => res.arrayBuffer());
-    const pdfBuffer = fs.readFileSync(resumeUrl);
-
-    const pdfData = await pdf(pdfBuffer);
-    const resumeText = pdfData.text.slice(0, 5000); // Trim for token budget
-
     const systemPrompt = `
 You are a helpful assistant representing Nency Patel, a Software Developer based in Chicago. Use only the following information from her resume to answer questions. Do not fabricate or infer beyond this data.
 
