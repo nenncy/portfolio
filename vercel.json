@@ -1,3 +1,12 @@
 {
-  "buildCommand": "npm install --legacy-peer-deps && npm run build"
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/geminiChat.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "api/geminiChat.js" }
+  ]
 }

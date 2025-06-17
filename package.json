@@ -20,6 +20,7 @@
     "animate.css": "^4.1.1",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^5.3.3",
+    "express": "^5.1.0",
     "framer-motion": "^12.15.0",
     "motion": "^12.15.0",
     "particles-bg": "^2.4.6",
