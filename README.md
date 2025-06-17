@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# 🗨️ react-chatify
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A lightweight, customizable chat widget for modern React apps — built with zero external React version constraints and fully compatible with **React 17+**.
 
-## Available Scripts
+## 🚀 Why react-chatify?
 
-In the project directory, you can run:
+Other popular React chat widgets often break on React 17 or newer due to legacy peer dependency issues. `react-chatify` was born out of that frustration — when integrating a resume chatbot in my portfolio, every other widget failed. So I built my own. ✨
 
-### `npm start`
+- 💬 Minimal and elegant chat UI
+- 🤖 Easy LLM (Gemini/GPT) integration
+- 🛠️ Developer-friendly and customizable
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📦 Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install react-chatify
+```
 
-### `npm test`
+or
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+yarn add react-chatify
+```
 
-### `npm run build`
+## 🧑‍💻 Basic Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```jsx
+import React, { useState } from "react";
+import ChatWidget from "react-chatify";
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+function App() {
+  const [messages, setMessages] = useState([
+    { text: "Hi! Ask me anything.", sender: "bot" }
+  ]);
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  const handleUserMessage = async (message) => {
+    setMessages((prev) => [...prev, { text: message, sender: "user" }]);
 
-### `npm run eject`
+    const res = await fetch("/api/geminiChat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message }),
+    });
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    const data = await res.json();
+    setMessages((prev) => [...prev, { text: data.reply, sender: "bot" }]);
+  };
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  return (
+    <ChatWidget
+      title="Ask Me"
+      messages={messages}
+      onUserMessage={handleUserMessage}
+    />
+  );
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+export default App;
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📁 File Structure
 
-## Learn More
+```
+.
+├── /src
+│   └── ChatWidget.jsx   # Core chat component
+├── /lib
+│   └── index.js         # Main entry point
+└── package.json
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🧪 Local Testing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone this repo
+2. Run:  
+   ```bash
+   npm install && npm run dev
+   ```
 
-### Code Splitting
+## 🔗 Live Demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Check out a live integration on my portfolio:  
+**https://portfolio-eight-orcin-51.vercel.app/**
 
-### Analyzing the Bundle Size
+## 🧠 Gemini/LLM Integration (Optional)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+You can connect this with any LLM backend (e.g., Gemini, GPT) by sending the user's message to your `/api/` endpoint and returning the response as shown above.
 
-### Making a Progressive Web App
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT License – use freely, modify with love.
