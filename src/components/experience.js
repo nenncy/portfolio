@@ -9,6 +9,7 @@ import esmsys from "../components/images/esmsys.jpeg";
 import pruthatek from "../components/images/pruthatek.jpeg";
 import infolabz from "../components/images/infolabz.jpeg";
 import sparks from "../components/images/sparks.jpeg";
+import lof from "../components/images/lof.jpeg";
 import Aos from "aos";
 import { motion, useScroll } from "motion/react";  // 
 import aos from "aos";
@@ -16,6 +17,13 @@ import { useRef } from "react"
 
 
 const experiences = [
+    {
+    company: "Leap of Faith technologies",
+    role: "Software Developer",
+    dates: "June 2025 - Present",
+    description: ` I’m developing and deploying core features for an AI-driven healthcare platform using Python and React. My work focuses on improving provider efficiency and patient outcomes by integrating FHIR-based APIs, optimizing clinical workflows, and leading bug resolution for CCD components. I also contribute to model deployment decisions, write robust API tests ensuring 99.9% uptime, and collaborate in Agile sprints to enhance overall system reliability and performance.`,
+    logo: `${lof}`,
+  },
   {
     company: "Hyphenova Network",
     role: "Software Devloper Intern",
